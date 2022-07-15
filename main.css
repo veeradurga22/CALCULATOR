@@ -39,3 +39,16 @@ h1{
     background-color:teal;
     color:aliceblue;
 }
+@media only screen and (max-width: 600px) {
+    .calc{
+        width: 80%;
+        margin-left: 0;
+    }
+    h1{
+        margin-left: 0;
+    }
+    .calc input{
+        width: 95%; 
+    }
+
+}

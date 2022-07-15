@@ -123,7 +123,7 @@
             //alert(eval(exp))
             try {
                 
-                var num = eval(exp); 
+                var num = eval(document.getElementById("input").value); 
                 if(num=="Infinity" || num=="-Infinity"){
                     throw "Zero Division Error";
                 }

@@ -1,0 +1,41 @@
+body{
+    background-color: pink;
+}
+.calc{
+    background-color: blue;
+    width: 22%;
+    height: 450;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 500px;
+    padding: 30px 35px 20px 35px;
+    border:4px solid green;
+}
+h1{
+    background-color:orange;
+    width:160px;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 40px;
+    border-radius: 5px;
+    color: blue;
+}
+.calc input{
+    width: 100%;
+    height: 60px;
+    font-size: 40px;
+}
+.calc button{
+    background-color: cyan;
+    width: 70px;
+    height: 70px;
+    margin-top: 5px;
+    font-weight: bolder;
+    font-family: 'calibri';
+    font-size: large;
+}
+.calc button:hover{
+    cursor: pointer;
+    background-color:teal;
+    color:aliceblue;
+}

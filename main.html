@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="calc">
+        <input type="text" id="input">
+        <button value="1" id="one" onclick="one();">1</button>
+        <button value="2" id="two" onclick="two();">2</button>
+        <button value="3" id="three" onclick="three();">3</button>
+        <button value="+" id="add" onclick="add();">+</button>
+        <button value="4" id="four" onclick="four();">4</button>
+        <button value="5" id="five" onclick="five();">5</button>
+        <button value="6" id="six" onclick="six();">6</button>
+        <button value="-" id="sub" onclick="sub();">-</button>
+        <button value="7" id="seven" onclick="seven();">7</button>
+        <button value="8" id="eight" onclick="eight();">8</button>
+        <button value="9" id="nine" onclick="nine();">9</button>
+        <button value="*" id="mul" onclick="mul();">*</button>
+        <button value="." id="dot" onclick="dot();">.</button>
+        <button value="0" id="zero" onclick="zero();">0</button>
+        <button value="=" id="equal" onclick="Evaluate()">=</button>
+        <button value="/" id="div" onclick="div();">/</button>
+        <button value="clear" id="clear" onclick="clear();">clear</button>
+
+    </div>
+    <script>
+        exp = "";
+        function Input(){
+            document.getElementById("input").value=exp;
+        }
+        function one(){
+            var one = document.getElementById("one").value;
+            exp=exp+one;
+            Input()
+        }
+        function two(){
+            var two = document.getElementById("two").value;
+            exp=exp+two;
+            Input()
+        }
+        function three(){
+            var three = document.getElementById("three").value;
+            exp=exp+three;
+            Input()
+        }
+        function four(){
+            var four = document.getElementById("four").value;
+            exp=exp+four;
+            Input()
+        }
+        function five(){
+            var five = document.getElementById("five").value;
+            exp=exp+five;
+            Input()
+        }
+        function six(){
+            var six = document.getElementById("six").value;
+            exp=exp+six;
+            Input()
+        }
+        function seven(){
+            var seven = document.getElementById("seven").value;
+            exp=exp+seven;
+            Input()
+        }
+        function eight(){
+            var eight = document.getElementById("eight").value;
+            exp=exp+eight;
+            Input()
+        }
+        function nine(){
+            var nine = document.getElementById("nine").value;
+            exp=exp+nine;
+            Input()
+        }
+        function zero(){
+            var zero = document.getElementById("zero").value;
+            exp=exp+zero;
+            Input()
+        }
+        
+        function add(){
+            var add = document.getElementById("add").value;
+            exp=exp+add;
+            Input()
+        }
+        function sub(){
+            var sub = document.getElementById("sub").value;
+            exp=exp+sub;
+            Input()
+        }
+        function mul(){
+            var mul = document.getElementById("mul").value;
+            exp=exp+mul;
+            Input()
+        }
+        function div(){
+            var div = document.getElementById("div").value;
+            exp=exp+div;
+            Input()
+        }
+        
+        function dot(){
+            //alert(document.getElementById("one").value)
+            var dot = document.getElementById("dot").value;
+            exp=exp+dot;
+            Input()
+        }
+        function clear(){
+            alert("cleared");
+            exp="";
+            document.getElementById("input").value="";
+        }   
+        function Evaluate(){
+            //alert(eval(exp))
+            try {
+                
+                var num = eval(exp); 
+                if(num=="Infinity" || num=="-Infinity"){
+                    throw "Zero Division Error";
+                }
+               
+                document.getElementById("input").value=num;
+                document.getElementById("input").style.background="green";
+                exp=num;               
+            }catch(err){
+
+                if(err=="Zero Division Error"){
+                    alert("Invalid\n"+err);
+
+                }
+                else{
+                    alert("Invalid Error");
+                }
+                document.getElementById("input").style.background="red";
+           }
+    }
+    </script>
+</body>
+</html>

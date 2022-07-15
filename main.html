@@ -26,7 +26,7 @@
         <button value="0" id="zero" onclick="zero();">0</button>
         <button value="=" id="equal" onclick="Evaluate()">=</button>
         <button value="/" id="div" onclick="div();">/</button>
-        <button value="clear" id="clear" onclick="clear();">clear</button>
+        <button value="Clear" onclick="Clear();">Clear</button>
 
     </div>
     <script>
@@ -112,11 +112,13 @@
             exp=exp+dot;
             Input()
         }
-        function clear(){
-            alert("cleared");
-            exp="";
-            document.getElementById("input").value="";
-        }   
+        function Clear(){
+        // alert("Cleared");
+        exp="";
+        document.getElementById("input").style.background="white";
+        Input();
+
+       }
         function Evaluate(){
             //alert(eval(exp))
             try {
